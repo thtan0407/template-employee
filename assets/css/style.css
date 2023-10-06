@@ -16,14 +16,12 @@
 }
 
 .section-gap + .section-gap {
-	padding-top: 75px;
+	padding-top: 100px;
 }
 
 .section-heading {
-	font-size: 3em;
-	background: -webkit-linear-gradient(var(--primary-gradient), var(--primary-color));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	font-size: 2.4em;
+	color: var(--bs-black);
 }
 
 .card-shadow {
@@ -44,8 +42,7 @@
 }
 
 .card-table .table thead [class*=table-col_] {
-	background-color: var(--primary-color);
-	color: var(--bs-white);
+	color: var(--primary-color);
 	font-weight: 700;
 	white-space: nowrap;
 }
@@ -61,7 +58,7 @@
 
 .card-table .table-col_2 {
 	width: 35%;
-	min-width: 150px;
+	min-width: 200px;
 }
 
 .card-table tbody tr:last-child td {
@@ -260,12 +257,112 @@
 	border-radius: 8px;
 	flex: 1 1 auto;
 	width: calc(25% - 8px);
-	background: var(--primary-color);
-	color: var(--bs-white);
+	background: #ececec;
+	color: var(--bs-dark);
 }
 
 .section-card .card-countdown > [class*=card-countdown_] .card-countdown_number {
 	font-size: 2em;
 	font-weight: 700;
 	line-height: 1;
+}
+
+@media screen and (max-width: 991px) {
+	.main {
+		padding: 30px 0;
+	}
+
+	.col-xl-left {
+		order: 2;
+	}
+
+	.col-xl-right {
+		order: 3;
+	}
+
+	.section-card {
+		position: static;
+		top: unset;
+		order: 2;
+	}
+
+	.section-gap {
+		padding: 0;
+	}
+
+	.section-gap + .section-gap {
+		padding-top: 50px;
+	}
+
+	.section-heading {
+		font-size: 2em;
+	}
+
+	.card-table {
+		font-size: 1.075em;
+	}
+
+	.card-table [class*=table-col_] {
+		padding: 10px 12px;
+	}
+
+	.employee-item .employee-image {
+		width: 40px;
+		height: 40px;
+	}
+
+	.section-card .card-countdown > [class*=card-countdown_] {
+		padding: 10px;
+	}
+
+	.section-card .card-countdown > [class*=card-countdown_] .card-countdown_number {
+		font-size: 1.6em;
+	}
+
+	.rank-list {
+		flex-direction: column;
+		gap: 15px;
+		margin-top: 30px;
+	}
+
+	.rank-list .rank-item {
+		width: 100%;
+		max-width: 100%;
+		order: 1 !important;
+		display: flex;
+		flex-direction: row !important;
+		align-items: center !important;
+		gap: 10px;
+		padding: 15px;
+		transform: scale(1) !important;
+		margin-top: 0 !important;
+	}
+
+	.rank-list .rank-item .rank-item_avatar {
+		position: static !important;
+		top: unset !important;
+		left: 0 !important;
+		transform: unset !important;
+		height: 55px;
+		width: 55px;
+	}
+
+	.rank-list .rank-item .rank-item_title {
+		margin-right: auto;
+		padding-right: 15px;
+	}
+
+	.rank-list .rank-item .rank-item_number {
+		margin-top: 0;
+		margin-right: 15px;
+		width: 50px !important;
+		height: 50px !important;
+		font-size: 1.8em;
+	}
+
+	.rank-list .rank-item_1 .rank-item_number:before,
+	.rank-list .rank-item_1 .rank-item_number:after {
+		width: 50px;
+		height: 50px;
+	}
 }
